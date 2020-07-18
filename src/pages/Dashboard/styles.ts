@@ -12,6 +12,16 @@ export const Title = styled.h1`
     line-height: 56px;
 
     margin-top: 80px;
+
+    @media (max-width: 720px) {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    @media (max-width: 410px) {
+        font-size: 36px;
+        line-height: 42px;
+    }
 `;
 
 export const Form = styled.form<FormProps>`
@@ -35,6 +45,10 @@ export const Form = styled.form<FormProps>`
         &::placeholder {
             color: #a8a8b3;
         }
+
+        @media (max-width: 720px) {
+            height: 55px;
+        }
     }
 
     button {
@@ -49,6 +63,25 @@ export const Form = styled.form<FormProps>`
         &:hover {
             background-color: ${shade(0.2, '#04d361')};
         }
+
+        @media (max-width: 720px) {
+            height: 55px;
+            width: 180px;
+        }
+    }
+
+    @media (max-width: 410px) {
+        flex-direction: column; 
+
+        input {
+            width: 100%;
+            padding: 18px 24px;
+            margin-bottom: 5px;
+        }     
+
+        button {
+            width: 100%;
+        }     
     }
 `;
 
@@ -87,14 +120,20 @@ export const Repositories = styled.div`
             strong {
                 font-size: 20px;
                 color: #3d3d4d;
-                margin-left: 16px;
+
+                @media (max-width: 720px) {
+                    font-size: 16px;
+                }
             }
 
             p {
                 font-size: 18px;
                 color: #a8a8b3;
                 margin-top: 4px;
-                margin-left: 16px;
+
+                @media (max-width: 720px) {
+                    font-size: 14px;
+                }
             }
         }
 
